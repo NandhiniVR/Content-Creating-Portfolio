@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nandhini | Content Portfolio</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+    background: linear-gradient(135deg,#e0e7ff,#f8fafc);
+    color:#1e293b;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 10%;
+}
+
+nav a{
+    margin-left:20px;
+    text-decoration:none;
+    color:#1e293b;
+    font-weight:500;
+}
+
+.hero{
+    text-align:center;
+    padding:80px 10%;
+}
+
+.hero h1{font-size:40px;}
+.hero p{margin-top:10px;color:#475569;}
+
+.section{padding:60px 10%;}
+
+.glass{
+    background:rgba(255,255,255,0.4);
+    backdrop-filter:blur(15px);
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 8px 30px rgba(0,0,0,0.05);
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card:hover{transform:translateY(-5px);transition:.3s;}
+
+.btn{
+    margin-top:10px;
+    padding:8px 14px;
+    background:#4f46e5;
+    color:white;
+    border-radius:6px;
+    display:inline-block;
+    cursor:pointer;
+}
+
+/* MODAL */
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    justify-content:center;
+    align-items:center;
+}
+
+.modal-content{
+    background:white;
+    padding:30px;
+    max-width:700px;
+    max-height:80vh;
+    overflow-y:auto;
+    border-radius:10px;
+}
+
+.close{
+    float:right;
+    cursor:pointer;
+    font-size:20px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>Nandhini</h2>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Nandhini V</h1>
+    <h1>Content Writer & AI Learner</h1>
+    <p>I enjoy creating clear and engaging content that helps people understand and grow.</p>
+</section>
+
+<section class="section" id="about">
+<div class="glass">
+<h2>About Me</h2>
+<p>
+I enjoy turning complex ideas into simple, relatable content. My focus is always on clarity, usefulness, and real impact where  content can truly help someone grow.
+</p>
+</div>
+</section>
+
+<section class="section" id="work">
+<h2>Content Samples</h2>
+
+<div class="cards">
+
+<div class="card glass">
+<h3>Improve Spoken English</h3>
+<p>Practical and relatable daily improvement guide.</p>
+<div class="btn" onclick="openModal(1)">View</div>
+</div>
+
+<div class="card glass">
+<h3>Online Learning Article</h3>
+<p>SEO-focused, human-centered article.</p>
+<div class="btn" onclick="openModal(2)">View</div>
+</div>
+
+<div class="card glass">
+<h3>Social Media Content</h3>
+<p>Short-form engaging writing.</p>
+<div class="btn" onclick="openModal(3)">View</div>
+</div>
+
+<div class="card glass">
+<h3>Lesson Design</h3>
+<p>Real learning module with story.</p>
+<div class="btn" onclick="openModal(4)">View</div>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="contact">
+<div class="glass">
+<h2>Contact</h2>
+<p>Email: nandhinidevr@gmail.com</p>
+<p>Phone: +91 93607 58930</p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Nandhini</p>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal()">×</span>
+<div id="content"></div>
+</div>
+</div>
+
+<script>
+function openModal(type){
+let c=document.getElementById("content");
+
+if(type===1){
+c.innerHTML=`<h2>5 Simple Ways to Improve Your Spoken English (Without Feeling Overwhelmed)</h2>
+
+<p>Improving your spoken English often feels like a big, intimidating task. Many people think they need perfect grammar, a huge vocabulary, or hours of practice every day. But the truth is much simpler—and much more encouraging.</p>
+
+<p><strong>You don’t need perfection. You need consistency.</strong></p>
+
+<p>When I first started focusing on improving my communication skills, I realized something important: the biggest barrier wasn’t knowledge—it was hesitation. The fear of making mistakes stopped me from even trying.</p>
+
+<p>So I started small.</p>
+
+<p>I began by speaking just one sentence a day in English. Sometimes it was something as simple as:</p>
+<ul>
+<li>“I am studying now.”</li>
+<li>“I am feeling a little tired.”</li>
+</ul>
+
+<p>It felt awkward at first, but slowly, that discomfort turned into confidence.</p>
+
+<p>Another thing that helped me was <strong>thinking in English instead of translating</strong>. This made my sentences more natural and faster to speak.</p>
+
+<p>Listening also played a big role—short videos, conversations, and repeating phrases helped me understand real usage.</p>
+
+<p><strong>I stopped aiming for perfect sentences and started aiming for clear communication.</strong></p>
+
+<p>Because people don’t care about perfect grammar—they care if they understand you.</p>
+
+<p><strong>Simple habits that helped me:</strong></p>
+<ul>
+<li>Speak daily (even one sentence)</li>
+<li>Practice in front of a mirror</li>
+<li>Learn phrases, not just words</li>
+<li>Listen and repeat</li>
+<li>Stay consistent</li>
+</ul>
+
+<p>Improvement doesn’t come from doing something big once—it comes from doing small things every day.</p>
+
+<p><strong>Every small effort you make today builds confidence for tomorrow.</strong></p>`;
+}
+
+if(type===2){
+c.innerHTML=`<h2>Why Online Learning is Powerful (And the Future of Education)</h2>
+
+<p>Education has changed more in the last few years than it did in decades—and at the center of that change is online learning.</p>
+
+<p>But what makes online learning truly powerful is not just technology.</p>
+
+<p><strong>It’s the freedom it gives to the learner.</strong></p>
+
+<p>For the first time, learning is no longer restricted by location, rigid schedules, or traditional classroom pressure. You can learn from your room, at your own pace, in a way that actually fits your life.</p>
+
+<p>This shift may seem simple—but it changes everything.</p>
+
+<p>In a traditional system, learning often feels forced. You move at the same speed as everyone else, whether you understand the concept or not.</p>
+
+<p>But with online learning, something important happens:</p>
+
+<p><strong>Learning becomes personal.</strong></p>
+
+<p>You can pause when you need to.  
+Rewatch when you don’t understand.  
+Skip what you already know.  
+Focus deeply on what actually matters.</p>
+
+<p>This creates a completely different learning experience—one that is based on understanding, not just completion.</p>
+
+<p>Another powerful advantage is <strong>access</strong>.</p>
+
+<p>Today, a student from any background can learn high-value skills like communication, coding, design, or AI—without needing access to elite institutions.</p>
+
+<p>Knowledge is no longer limited.</p>
+
+<p><strong>Opportunity is no longer limited.</strong></p>
+
+<p>But what truly makes online learning effective is how it connects learning with real-world application.</p>
+
+<p>Instead of just memorizing information, learners are now encouraged to:</p>
+
+<ul>
+<li>Practice skills regularly</li>
+<li>Build real projects</li>
+<li>Solve real-world problems</li>
+<li>Apply what they learn immediately</li>
+</ul>
+
+<p>This shift is critical because education is not just about gaining knowledge—it’s about building <strong>capability</strong>.</p>
+
+<p>Of course, online learning is not perfect.</p>
+
+<p>It requires discipline.  
+It requires consistency.  
+And most importantly—it requires self-motivation.</p>
+
+<p>Without these, even the best resources won’t help.</p>
+
+<p>But when used correctly, online learning becomes one of the most powerful tools for growth.</p>
+
+<p>It allows you to learn what you want, when you want, and how you want.</p>
+
+<p>And that changes the entire meaning of education.</p>
+
+<p><strong>Because in the end, online learning doesn’t just teach you skills—it teaches you how to learn.</strong></p>
+
+<p>And that is the most valuable skill of all.</p>
+
+<p><strong>Online learning doesn’t just deliver content.  
+It gives control back to the learner.</strong></p>`;
+}
+if(type===3){
+c.innerHTML=`<h2>Social Content Sample</h2>
+
+<p><strong>Still afraid to speak English?</strong></p>
+
+<p>You’re not alone.</p>
+
+<p>Many people think they need to learn everything first before they start speaking. But that’s what keeps them stuck.</p>
+
+<p><strong>Here’s a simple shift:</strong></p>
+
+<p>Start with one sentence today.</p>
+
+<p>Not perfect. Not long. Just one.</p>
+
+<p>It may feel awkward. You may pause. You may make mistakes.</p>
+
+<p>But that one sentence?</p>
+
+<p><strong>It’s progress.</strong></p>
+
+<p>Confidence doesn’t come from thinking.  
+It comes from doing.</p>
+
+<p>The more you try, the easier it becomes.  
+The easier it becomes, the more confident you feel.</p>
+
+<p><strong>Don’t aim for perfect English. Aim for real effort.</strong></p>
+
+<p>Because even one sentence is better than silence.</p>`;
+}
+
+if(type===4){
+c.innerHTML=`<h2>Lesson: Introduce Yourself Confidently</h2>
+
+<p><strong>Objective:</strong> Help learners speak simple English sentences confidently.</p>
+
+<p>When I first tried introducing myself in English, I felt stuck. I knew the words—but forming sentences felt difficult.</p>
+
+<p>I kept thinking about grammar, correctness, and how I might sound. That hesitation made something simple feel hard.</p>
+
+<p>So I created a simple structure for myself:</p>
+
+<ul>
+<li>My name is...</li>
+<li>I am from...</li>
+<li>I like...</li>
+</ul>
+
+<p>At first, it felt basic. But when I practiced it daily, something changed.</p>
+
+<p><strong>Clarity builds confidence.</strong></p>
+
+<p>I started with:</p>
+<p>“My name is Nandhini. I am from Trichy. I like learning new skills.”</p>
+
+<p>Then slowly expanded:</p>
+<p>“I am currently studying AIML. I enjoy building projects and learning new technologies.”</p>
+
+<p>This helped me:</p>
+<ul>
+<li>Speak without overthinking</li>
+<li>Improve sentence flow</li>
+<li>Gain confidence step by step</li>
+</ul>
+
+<p><strong>Activity:</strong> Try speaking 3 lines about yourself.</p>
+
+<p>Don’t worry about mistakes—focus on finishing your sentence.</p>
+
+<p><strong>Focus:</strong> Confidence over correctness.</p>
+
+<p>Because when you chase perfection, you stop speaking.  
+But when you focus on expression, improvement happens naturally.</p>
+
+<p><strong>This method comes from real practice—not theory.</strong></p>`;
+}
+
+document.getElementById("modal").style.display="flex";
+}
+
+function closeModal(){
+document.getElementById("modal").style.display="none";
+}
+</script>
+</body>
+</html>
